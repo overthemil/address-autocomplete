@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("<h1>Send request to /api</h1>");
 });
 
-app.get("/api/addresses", (req, res) => {
+app.post("/api/addresses", (req, res) => {
   const { query } = req.body;
 
   const url = `${addressrURL}/addresses?q=${query}`;
