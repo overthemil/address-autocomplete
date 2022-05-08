@@ -18,7 +18,7 @@ app.get("/api/addresses", (req, res) => {
   const { query } = req.body;
 
   const url = `${addressrURL}/addresses?q=${query}`;
-  wretch
+  wretch()
     .url(url)
     .get()
     .json((data) => {
